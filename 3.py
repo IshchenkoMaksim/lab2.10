@@ -4,13 +4,13 @@
 # (чтобы значения шли в обратном порядке)
 
 
-def dict_reverse(**dict_f):
+def reverse(**kwargs):
     keys = []
-    for k in dict_f.keys():
+    for k in kwargs.keys():
         keys.append(k)
 
     values = []
-    for v in dict_f.values():
+    for v in kwargs.values():
         values.append(v)
 
     values.reverse()
@@ -19,16 +19,7 @@ def dict_reverse(**dict_f):
 
 
 if __name__ == '__main__':
-    sl = dict()
+    result = reverse(one=1, two=2, three=3, four=4, five=5)
 
-    while True:
-        key = input("Введите ключ: ")
-        value = input("Введите значение: ")
-        if key == '' or value == '':
-            break
-        sl.setdefault(key, value)
-
-    sl = dict_reverse(**sl)
-
-    for k, v in sl.items():
-        print(k, 'is', v)
+    for key, value in result.items():
+        print(key, ':', value)
