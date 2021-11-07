@@ -6,12 +6,10 @@
 
 def reverse(**kwargs):
     keys = []
-    for k in kwargs.keys():
-        keys.append(k)
+    [keys.append(k) for k in kwargs.keys()]
 
     values = []
-    for v in kwargs.values():
-        values.append(v)
+    [values.append(v) for v in kwargs.values()]
 
     values.reverse()
 
@@ -22,4 +20,4 @@ if __name__ == '__main__':
     result = reverse(one=1, two=2, three=3, four=4, five=5)
 
     for key, value in result.items():
-        print(key, ':', value)
+        print(key, '=', value)
