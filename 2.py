@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*-
 
 
-def garmon(*nums):
+def sr_garmon(*nums):
     summa = 0
     d = len(nums)
     for i in nums:
         summa += 1/i
     x = d/summa
-    return x
+    return float(x)
 
 
 if __name__ == '__main__':
@@ -16,4 +16,4 @@ if __name__ == '__main__':
     if not list_n:
         print("None")
     else:
-        print(garmon(*list_n))
+        print(sr_garmon(*list_n))

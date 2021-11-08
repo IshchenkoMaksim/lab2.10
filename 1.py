@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*-
 
 
-def geom(*nums):
+def sr_geometr(*nums):
     multi = 1
     for i in nums:
         multi *= i
     sr_geom = pow(multi, 1/len(nums))
-    return sr_geom
+    return float(sr_geom)
 
 
 if __name__ == '__main__':
@@ -15,4 +15,4 @@ if __name__ == '__main__':
     if not list_n:
         print("None")
     else:
-        print(geom(*list_n))
+        print(sr_geometr(*list_n))
