@@ -3,6 +3,9 @@
 
 
 def sr_garmon(*nums):
+    if not nums:
+        return None
+
     summa = 0
     d = len(nums)
     for i in nums:
@@ -13,7 +16,4 @@ def sr_garmon(*nums):
 
 if __name__ == '__main__':
     list_n = list(map(float, input("Введите числа через пробел: ").split()))
-    if not list_n:
-        print("None")
-    else:
-        print(sr_garmon(*list_n))
+    print(sr_garmon(*list_n))

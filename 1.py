@@ -3,6 +3,9 @@
 
 
 def sr_geometr(*nums):
+    if not nums:
+        return None
+
     multi = 1
     for i in nums:
         multi *= i
@@ -12,7 +15,4 @@ def sr_geometr(*nums):
 
 if __name__ == '__main__':
     list_n = list(map(float, input("Введите числа через пробел: ").split()))
-    if not list_n:
-        print("None")
-    else:
-        print(sr_geometr(*list_n))
+    print(sr_geometr(*list_n))
