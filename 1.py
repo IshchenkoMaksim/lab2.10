@@ -2,14 +2,14 @@
 # -*- coding: utf-8 -*-
 
 
-def sr_geometr(*nums):
-    if not nums:
+def sr_geometr(*args):
+    if not args:
         return None
 
     multi = 1
-    for i in nums:
+    for i in args:
         multi *= i
-    sr_geom = pow(multi, 1/len(nums))
+    sr_geom = pow(multi, 1/len(args))
     return float(sr_geom)
 
 

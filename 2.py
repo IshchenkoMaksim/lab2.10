@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*-
 
 
-def sr_garmon(*nums):
-    if not nums:
+def sr_garmon(*args):
+    if not args:
         return None
 
     summa = 0
-    d = len(nums)
-    for i in nums:
+    d = len(args)
+    for i in args:
         summa += 1/i
     x = d/summa
     return float(x)
